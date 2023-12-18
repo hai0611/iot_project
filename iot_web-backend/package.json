@@ -1,0 +1,39 @@
+{
+  "name": "iot",
+  "version": "1.0.0",
+  "description": "iot web back-end",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Traianthai/iot_webBE.git"
+  },
+  "keywords": [
+    "Iot",
+    "mqtt",
+    "nodejs"
+  ],
+  "author": "manhzxcv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Traianthai/iot_webBE/issues"
+  },
+  "homepage": "https://github.com/Traianthai/iot_webBE#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mqtt": "^5.0.4",
+    "mysql": "^2.18.1",
+    "node-localstorage": "^3.0.5"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
