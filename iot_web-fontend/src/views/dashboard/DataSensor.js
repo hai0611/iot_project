@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
 import { CTableBody, CTableHead, CTableHeaderCell, CTable, CTableRow, CTableDataCell, CCard } from '@coreui/react'
+import HOST_URL from '../../global'
 
 const DataSensor = () => {
   const [sensors, setSensors] = useState([])
   useEffect(() => {
-    fetch(`http://localhost:3001`, {
+    fetch(`${HOST_URL}`, {
       method: 'GET',
       headers: {'Content-Type': 'application/json'},
     })

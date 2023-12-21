@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { CTableBody, CTableHead, CTableHeaderCell, CTable, CTableRow, CTableDataCell, CCard } from '@coreui/react'
+import HOST_URL from '../../global'
 const DataLed = () => {
   const [leds, setLeds] = useState([])
   useEffect(() => {
-    fetch(`http://localhost:3001/led`, {
+    fetch(`${HOST_URL}/led`, {
       method: 'GET',
       headers: {'Content-Type': 'application/json'},
     })

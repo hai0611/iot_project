@@ -8,6 +8,7 @@ import { getStyle } from '@coreui/utils'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import CIcon from '@coreui/icons-react'
 import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
+import HOST_URL from '../../global'
 
 const WidgetsDropdown = () => {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const WidgetsDropdown = () => {
   const [ran, setRan] = useState([]);
   const [label, setLabel] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3001/getday`, {
+    fetch(`${HOST_URL}/getday`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     })
@@ -64,75 +65,75 @@ const WidgetsDropdown = () => {
   return (
     <>
       {(<CRow>
-        {/* <CCol sm={6} lg={3}>
+        <CCol sm={6} lg={3}>
           <CWidgetStatsA
             className="mb-4"
             color="secondary"
-            // value={
-            //   <>
-            //     <p id="light_live"></p>
-            //   </>
-            // }
-            // title="Ánh sáng"
-            // chart={
-            //   <CChartLine
-            //     className="mt-3 mx-3"
-            //     style={{ height: '70px' }}
-            //     data={{
-            //       labels: label,
-            //       datasets: [
-            //         {
-            //           label: 'Ánh sáng',
-            //           backgroundColor: 'transparent',
-            //           borderColor: 'rgba(255,255,255,.55)',
-            //           pointBackgroundColor: getStyle('--cui-secondary'),
-            //           data: light,
-            //         },
-            //       ],
-            //     }}
-            //     options={{
-            //       plugins: {
-            //         legend: {
-            //           display: false,
-            //         },
-            //       },
-            //       maintainAspectRatio: false,
-            //       scales: {
-            //         x: {
-            //           grid: {
-            //             display: false,
-            //             drawBorder: false,
-            //           },
-            //           ticks: {
-            //             display: false,
-            //           },
-            //         },
-            //         y: {
-            //           display: false,
-            //           grid: {
-            //             display: false,
-            //           },
-            //           ticks: {
-            //             display: false,
-            //           },
-            //         },
-            //       },
-            //       elements: {
-            //         line: {
-            //           borderWidth: 1,
-            //           tension: 0.4,
-            //         },
-            //         point: {
-            //           radius: 4,
-            //           hitRadius: 10,
-            //           hoverRadius: 4,
-            //         },
-            //       },
-            //     }}
-            //   />
-            // }
+            value={
+              <>
+                <p id="light_live"></p>
+              </>
+            }
+            title="Ánh sáng"
+            chart={
+              <CChartLine
+                className="mt-3 mx-3"
+                style={{ height: '70px' }}
+                data={{
+                  labels: label,
+                  datasets: [
+                    {
+                      label: 'Ánh sáng',
+                      backgroundColor: 'transparent',
+                      borderColor: 'rgba(255,255,255,.55)',
+                      pointBackgroundColor: getStyle('--cui-secondary'),
+                      data: light,
+                    },
+                  ],
+                }}
+                options={{
+                  plugins: {
+                    legend: {
+                      display: false,
+                    },
+                  },
+                  maintainAspectRatio: false,
+                  scales: {
+                    x: {
+                      grid: {
+                        display: false,
+                        drawBorder: false,
+                      },
+                      ticks: {
+                        display: false,
+                      },
+                    },
+                    y: {
+                      display: false,
+                      grid: {
+                        display: false,
+                      },
+                      ticks: {
+                        display: false,
+                      },
+                    },
+                  },
+                  elements: {
+                    line: {
+                      borderWidth: 1,
+                      tension: 0.4,
+                    },
+                    point: {
+                      radius: 4,
+                      hitRadius: 10,
+                      hoverRadius: 4,
+                    },
+                  },
+                }}
+              />
+            }
           />
-        </CCol> */}
+        </CCol>
         <CCol sm={6} lg={3}>
           <CWidgetStatsA
             className="mb-4"
@@ -274,15 +275,15 @@ const WidgetsDropdown = () => {
             }
           />
         </CCol>
-        {/* <CCol sm={6} lg={3}>
+        <CCol sm={6} lg={3}>
           <CWidgetStatsA
             className="mb-4"
             color="danger"
-            // value={
-            //   <>
-            //     <p id="ran_live"></p>
-            //   </>
-            // }
+            value={
+              <>
+                <p id="ran_live"></p>
+              </>
+            }
             title="Mưa"
 
             chart={
@@ -344,7 +345,7 @@ const WidgetsDropdown = () => {
               />
             }
           />
-        </CCol> */}
+        </CCol>
       </CRow>)}
     </>
 
