@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import { cilLightbulb, cilAsteriskCircle, cilAsterisk } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import HOST_URL from '../../global'
-
 const ButtonControll = () => {
     const [l1, setL1] = useState()
     const [l2, setL2] = useState()
@@ -66,33 +65,10 @@ const ButtonControll = () => {
         <>
             <CCard className="mb-4" style={{ height: '90%' }}>
                 <CCol className="align-items-center">
-                    <CRow >
-                        {l1 ? (
-                            <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển đèn</p>
-                                <div className="d-grid gap-2 col-3 mx-auto ">
-                                    <CIcon icon={cilLightbulb} className="text-success" size="xxl" style={{ height: 'auto', width: 'auto' }} />
-                                </div>
-                                <div className="d-grid gap-2 col-3 mx-auto">
-                                    <CButton color="info" onClick={() => { Click(1) }}>ON </CButton>
-                                </div>
-                            </CCol>) : (
-                            <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển đèn</p>
-
-                                <div className="d-grid gap-2 col-3 mx-auto ">
-                                    <CIcon icon={cilLightbulb} className="text-secondary" size="xxl" style={{ height: 'auto', width: 'auto' }} />
-                                </div>
-                                <div className="d-grid gap-2 col-3 mx-auto">
-                                    <CButton color="dark" onClick={() => { Click(1) }}>OFF</CButton>
-                                </div>
-                            </CCol>
-                        )}
-                    </CRow>
                     <CRow>
                         {l2 ? (
                             <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển quạt</p>
+                                <p style={{ padding: '22px' }}>Bật tắt cảnh báo</p>
 
                                 <div className="d-grid gap-2 col-3 mx-auto ">
                                     <CIcon icon={cilAsteriskCircle} className="text-danger" size="xxl" style={{ height: 'auto', width: 'auto' }} />
@@ -102,39 +78,13 @@ const ButtonControll = () => {
                                 </div>
                             </CCol>) : (
                             <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển quạt</p>
+                                <p style={{ padding: '22px' }}>Bật tắt cảnh báo</p>
 
                                 <div className="d-grid gap-2 col-3 mx-auto ">
                                     <CIcon icon={cilAsteriskCircle} className="text-secondary" size="xxl" style={{ height: 'auto', width: 'auto' }} />
                                 </div>
                                 <div className="d-grid gap-2 col-3 mx-auto">
                                     <CButton color="dark" onClick={() => { Click(2) }}>OFF</CButton>
-                                </div>
-                            </CCol>
-                        )}
-                    </CRow>
-                    <CRow>
-                        {l3 ? (
-                            <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển điều hoà</p>
-
-
-                                <div className="d-grid gap-2 col-3 mx-auto ">
-                                    <CIcon icon={cilAsterisk} className="text-info" size="xxl" style={{ height: 'auto', width: 'auto' }} />
-                                </div>
-                                <div className="d-grid gap-2 col-3 mx-auto">
-                                    <CButton color="info" onClick={() => { Click(3) }}>ON </CButton>
-                                </div>
-                            </CCol>) : (
-                            <CCol style={{ paddingTop: '22px' }}>
-                                <p style={{ padding: '22px' }}>Điều khiển điều hoà</p>
-
-
-                                <div className="d-grid gap-2 col-3 mx-auto ">
-                                    <CIcon icon={cilAsterisk} className="text-secondary" size="xxl" style={{ height: 'auto', width: 'auto' }} />
-                                </div>
-                                <div className="d-grid gap-2 col-3 mx-auto">
-                                    <CButton color="dark" onClick={() => { Click(3) }}>OFF</CButton>
                                 </div>
                             </CCol>
                         )}

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import { CTableBody, CTableHead, CTableHeaderCell, CTable, CTableRow, CTableDataCell, CCard } from '@coreui/react'
 import HOST_URL from '../../global'
-
 const DataSensor = () => {
   const [sensors, setSensors] = useState([])
   useEffect(() => {

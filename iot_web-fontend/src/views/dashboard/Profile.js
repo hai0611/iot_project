@@ -34,15 +34,15 @@ const Profile = () => {
               <CImage align="start" rounded src="./img\avatar.png" width={200} height={200} />
             </CCol>
             <CCol sm={8}>
-              <h2>Đỗ Việt Long </h2>
-              <p>B20DCCN428</p>
+              <h2>Vũ Ngọc Hải </h2>
+              <p>B20DCCN224</p>
             </CCol>
           </CRow>
           <CRow>
             <p>                     </p>
-            <p><strong>Class: </strong>D20HTTT03</p>
-            <p><strong>Email: </strong>long09092k2@gmail.com</p>
-            <p><strong>Phone: </strong>0865266195</p>
+            <p><strong>Class: </strong>D20CNPM04</p>
+            <p><strong>Email: </strong>haivu0352@gmail.com</p>
+            <p><strong>Phone: </strong>0114523546</p>
           </CRow>
         </CCard>
         
